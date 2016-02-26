@@ -20349,16 +20349,16 @@ cr.behaviors.solid = function(runtime)
 	behaviorProto.acts = new Acts();
 }());
 cr.getObjectRefTable = function () { return [
+	cr.plugins_.List,
+	cr.plugins_.progressbar,
+	cr.plugins_.TiledBg,
+	cr.plugins_.Text,
+	cr.plugins_.Sprite,
+	cr.plugins_.TextBox,
+	cr.plugins_.C2WebSocket,
 	cr.plugins_.Arr,
 	cr.plugins_.Button,
 	cr.plugins_.Browser,
-	cr.plugins_.List,
-	cr.plugins_.Sprite,
-	cr.plugins_.TiledBg,
-	cr.plugins_.progressbar,
-	cr.plugins_.Text,
-	cr.plugins_.TextBox,
-	cr.plugins_.C2WebSocket,
 	cr.behaviors.Car,
 	cr.behaviors.scrollto,
 	cr.behaviors.solid,
