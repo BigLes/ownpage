@@ -1,8 +1,8 @@
 {
-  "name": "nodejs-getting-started",
+  "name": "lisovyk-oleksandr",
   "version": "1.0.0",
-  "description": "End to end sample for running Node.JS applications on Google Cloud Platform",
-  "repository": "https://github.com/GoogleCloudPlatform/nodejs-getting-started",
+  "description": "Lisovyk Oleksandr's own page",
+  "repository": "https://github.com/BigLes/ownpage",
   "private": true,
   "scripts": {
     "start": "node app.js",
@@ -12,22 +12,7 @@
     "mocha": "mocha test/index.js -t 30000",
     "test": "npm run lint && npm run mocha"
   },
-  "author": "Google Inc.",
-  "contributors": [
-    {
-      "name": "Jon Wayne Parrott",
-      "email": "jonwayne@google.com"
-    },
-    {
-      "name": "Jonathan Simon",
-      "email": "jbsimon@google.com"
-    },
-    {
-      "name": "Jason Dobry",
-      "email": "jdobry@google.com"
-    }
-  ],
-  "license": "Apache Version 2.0",
+  "author": "Lisovyk Oleksandr",
   "dependencies": {
     "express": "^4.13.4"
   },
@@ -37,6 +22,6 @@
     "supertest": "^1.2.0"
   },
   "engines": {
-    "node": ">=0.12.7"
+    "node": ">=5.6.0"
   }
 }
