@@ -9,7 +9,7 @@ skip_files:
 
 #resources
 resources:
- cpu: .1
+ cpu: .5
  memory_gb: 0.6
  disk_size_gb: 10
 
