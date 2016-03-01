@@ -23,7 +23,7 @@ if (module === require.main) {
         new FormulaBackEnd(host);
 
         console.log('App listening at http://%s:%s', host, port);
-  });
+    });
 }
 
 module.exports = app;

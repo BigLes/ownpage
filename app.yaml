@@ -12,6 +12,9 @@ resources:
  cpu: .5
  memory_gb: 0.6
  disk_size_gb: 10
+vm_settings:
+  machine_type: f1-micro
+
 
 #netwotrk
 network:
