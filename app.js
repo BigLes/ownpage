@@ -17,7 +17,11 @@ app.get('/formula1', function(req, res) {
 
 if (module === require.main) {
     let server = app.listen(process.env.PORT || 8080, function () {
-        let host = server.address().address;
+        let host = server.address().address ? server.address().address : '127.0.0.1';
+        console.log('Host: ' + host);
+        if (host === '::' || !host) {
+            host = '127.0.0.1';
+        }
         let port = server.address().port;
 
         new FormulaBackEnd(host);

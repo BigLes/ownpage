@@ -2,21 +2,18 @@
 module: default
 runtime: nodejs
 vm: true
-manual_scaling:
-  instances: 1
 skip_files:
   - ^(.*/)?.*/node_modules/.*$
 
-#resources
-resources:
- cpu: .5
- memory_gb: 0.6
- disk_size_gb: 10
+#manual scaling
+manual_scaling:
+  instances: 1
+
+#vmsettings
 vm_settings:
   machine_type: f1-micro
-
 
 #netwotrk
 network:
   forwarded_ports:
-  - 8081
+    - 8081
