@@ -15,19 +15,17 @@ app.get('/formula1', function(req, res) {
 	res.sendFile(path.join(__dirname + '/formula1-front-end/index.html'));
 });
 
-if (module === require.main) {
-    let server = app.listen(process.env.PORT || 1337, function () {
-        let host = server.address().address;
-        console.log('Host: ' + host);
-        if (host === '::' || !host) {
-            host = '127.0.0.1';
-        }
-        let port = server.address().port;
+let server = app.listen(process.env.PORT || 1337, function () {
+    let host = server.address().address;
+    console.log('Host: ' + host);
+    if (host === '::' || !host) {
+        host = '127.0.0.1';
+    }
+    let port = server.address().port;
 
-        new FormulaBackEnd(host);
+    new FormulaBackEnd(host);
 
-        console.log('App listening at http://%s:%s', host, port);
-    });
-}
+    console.log('App listening at http://%s:%s', host, port);
+});
 
 module.exports = app;
