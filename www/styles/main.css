@@ -86,6 +86,9 @@ p label span.colon {
 .section {
     margin-bottom: 25px;
 }
+.section:last-child {
+    margin-bottom: 0;
+}
 .section .set {
 }
 .item {
@@ -159,16 +162,16 @@ p label span.colon {
 }
 
 #photo {
-    width: 160px;
+    width: 170px;
     height: 200px;
     overflow: hidden;
     float: left;
-    margin-top: 4px;
+    margin: 4px 0 4px 0;
     border-radius: 4px;
 }
 #photo img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 .header.photo {
     margin-left: 190px;
