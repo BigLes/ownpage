@@ -7,8 +7,9 @@ let FormulaBackEnd = require('./formula1-back-end');
 
 let app = express();
 
+app.use(express.static(__dirname + '/www'));
 app.get('/', function(req, res) {
-  res.status(200).send('Hello, world!');
+    res.sendFile(path.join(__dirname + '/www/index.html'));
 });
 app.use(express.static(__dirname + '/formula1-front-end'));
 app.get('/formula1', function(req, res) {
