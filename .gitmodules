@@ -4,6 +4,3 @@
 [submodule "formula1-front-end"]
 	path = formula1-front-end
 	url = https://github.com/BigLes/formula1-front-end.git
-[submodule "regexp"]
-	path = regexp
-	url = https://github.com/BigLes/regexp.git
