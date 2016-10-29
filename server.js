@@ -4,7 +4,7 @@ let express = require('express');
 let path = require('path');
 
 let FormulaBackEnd = require('./formula1-back-end');
-let RegExp = require('./regexp');
+// let RegExp = require('./regexp');
 
 let app = express();
 
