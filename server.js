@@ -26,7 +26,7 @@ let server = app.listen(process.env.PORT || 1337, function () {
     let port = server.address().port;
 
     new FormulaBackEnd(host);
-    // new RegExp(app);
+    new RegExp(app);
 
     console.log('App listening at http://%s:%s', host, port);
 });
