@@ -4,7 +4,7 @@ let express = require('express');
 let path = require('path');
 
 let FormulaBackEnd = require('./formula1-back-end');
-// let RegExp = require('./regexp');
+let RegExp = require('./regexp');
 
 let app = express();
 
@@ -26,7 +26,7 @@ let server = app.listen(process.env.PORT || 1337, function () {
     let port = server.address().port;
 
     new FormulaBackEnd(host);
-// -    new RegExp(app);
+    new RegExp(app);
 
     console.log('App listening at http://%s:%s', host, port);
 });
