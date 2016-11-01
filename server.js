@@ -19,6 +19,7 @@ app.get('/formula1', function(req, res) {
 
 let server = app.listen(process.env.PORT || 1337, function () {
     let host = server.address().address;
+    console.log('Host: ' + host);
     if (host === '::' || !host) {
         host = '127.0.0.1';
     }
@@ -26,6 +27,8 @@ let server = app.listen(process.env.PORT || 1337, function () {
 
     new FormulaBackEnd(host);
     new RegExp(app);
+
+    console.log('Connection string: ' + process.env.MYSQLCONNSTR_localdb);
 
     console.log('App listening at http://%s:%s', host, port);
 });
