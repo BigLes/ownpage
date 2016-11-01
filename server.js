@@ -19,7 +19,6 @@ app.get('/formula1', function(req, res) {
 
 let server = app.listen(process.env.PORT || 1337, function () {
     let host = server.address().address;
-    console.log('Host: ' + host);
     if (host === '::' || !host) {
         host = '127.0.0.1';
     }
