@@ -12,6 +12,7 @@ app.use(function allowCrossDomain(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    console.log("inCORS1");
     next();
 });
 app.use(express.static(__dirname + '/www'));
