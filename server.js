@@ -8,6 +8,12 @@ let RegExp = require('./regexp');
 
 let app = express();
 
+app.use(function allowCrossDomain(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
 app.use(express.static(__dirname + '/www'));
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/www/index.html'));
@@ -15,12 +21,6 @@ app.get('/', function(req, res) {
 app.use(express.static(__dirname + '/formula1-front-end'));
 app.get('/formula1', function(req, res) {
 	res.sendFile(path.join(__dirname + '/formula1-front-end/index.html'));
-});
-app.use(function allowCrossDomain(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    next();
 });
 
 let server = app.listen(process.env.PORT || 1337, function () {
